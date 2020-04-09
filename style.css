@@ -1,0 +1,275 @@
+html{
+    height: 100%;
+    background: radial-gradient(circle, #fff, #ccc);
+    background: -ms-radial-gradient(circle, #fff, #ccc);
+    background: -moz-radial-gradient(circle, #fff, #ccc);
+    background: -webkit-radial-gradient(circle, #fff, #ccc);
+    background: -o-radial-gradient(circle, #fff, #ccc);
+}
+#container{
+    height: 600px;
+    width: 750px;
+    margin: 10px auto;
+    background-color: #9DD2EA;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 4px 0px #009de4;
+    -o-box-shadow: 0px 4px 4px 0px #009de4;
+    -ms-box-shadow: 0px 4px 4px 0px #009de4;
+    -moz-box-shadow: 0px 4px 4px 0px #009de4;
+    -webkit-box-shadow: 0px 4px 4px 0px #009de4;
+    position: relative;
+}
+#score{
+    position: absolute;
+    background-color: #f1ff92;
+    box-shadow: 0px 4px #9da853;
+    -o-box-shadow: 0px 4px #9da853;
+    -ms-box-shadow: 0px 4px #9da853;
+    -moz-box-shadow: 0px 4px #9da853;
+    -webkit-box-shadow: 0px 4px #9da853;
+    padding: 11px;
+    left: 700px;
+    color: #888e5f;
+}
+#correct{
+    position: absolute;
+    background-color: #42e252;
+    left: 260px;
+    padding: 11px;
+    color: white;
+    display: none;
+}
+#wrong{
+    position: absolute;
+    background-color: #de401a;
+    left: 250px;
+    padding: 11px;
+    color: white;
+    display: none;
+}
+#fruitsConatiner{
+    height: 400px;
+    width: 650px;
+    background-color: white;
+    margin: 50px auto 10px auto;
+    box-shadow: 0px 4px #535aa8;
+    -o-box-shadow: 0px 4px #535aa8;
+    -ms-box-shadow: 0px 4px #535aa8;
+    -moz-box-shadow: 0px 4px #535aa8;
+    -webkit-box-shadow: 0px 4px #535aa8;
+    text-align: center;
+    font-size: 100px;
+    font-family: cursive, sans-serif;
+    color: black;
+    position: relative;
+    overflow: hidden;
+}
+#instruction{
+    height: 50px;
+    width: 450px;
+    background-color: #b481d9;
+    margin: 10px auto;
+    box-shadow: 0px 4px #8153a8;
+    text-align: center;
+    line-height: 45px;
+    color: black;
+}
+#choices{
+    width: 450px;
+    height: 100px;
+    margin: 5px auto;
+}
+.box{
+    width: 85px;
+    height: 85px;
+    background-color: white;
+    float: left;
+    margin-right: 36px;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 80px;
+    position: relative;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+}
+#box4{
+    margin-right: 0px;
+}
+.box:hover, #startreset:hover{
+    background-color: #9c89f6;
+    color: white;
+    box-shadow: 0px 4px #6b54d3;
+}
+.box:active,  #startreset:active{
+    top: 4px;
+    box-shadow: 0px 0px #6b54d3;
+    -moz-box-shadow: 0px 0px #6b54d3;
+    -webkit-box-shadow: 0px 0px #6b54d3;
+    -o-box-shadow: 0px 0px #6b54d3;
+    -ms-box-shadow: 0px 0px #6b54d3;
+}
+#startreset{
+    width: 78px;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.5);
+    margin: 0px auto;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+}
+#trialremaining{
+    position: absolute;
+    width: 80px;
+    padding: 10px;
+    /* top: 395px;
+    left: 400px; */
+    background-color: #f1ff92;
+    border-radius: 3px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+#gameover{
+    position: absolute;
+    height: 200px;
+    width: 500px;
+    background: linear-gradient(#f3ca6b, #f3706c);
+    background: -o-linear-gradient(#f3ca6b, #f3706c);
+    background: -webkit-linear-gradient(#f3ca6b, #f3706c);
+    background: -moz-linear-gradient(#f3ca6b, #f3706c);
+    background: -ms-linear-gradient(#f3ca6b, #f3706c);
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase;
+    top: 170px;
+    left: 145px;
+    display: none;
+}
+#ok{
+    position: absolute;
+    height: 60px;
+    width: 100px;
+    background-color: #f3706c;
+    color: white;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 50px;
+    top: 385px;
+    left: 340px;
+    cursor: pointer;
+    display: none;
+}
+#developer{
+    position: absolute;
+    text-align: center;
+    top: 610px;
+    left: 290px;
+}
+#stay{
+    position: absolute;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 800;
+    top: 620px;
+    left: 250px;
+    display: none;
+}
+.heart{
+    height: 16px;
+    width: 16px;
+    margin: 0px 5px;
+}
+.fruit{
+    display: none;
+    position: absolute;
+}
+@media only screen and (max-width: 768px){
+    #score,#startreset,#timeremaining, #correct, #wrong{
+        font-size: 35px;
+    }
+    #score{
+        width: fit-content;
+        left: 425px;
+        color: black;
+    }
+    #container{
+        height: 530px;
+        margin: 100px 0px;
+    }
+    #question{
+        height: 150px;
+        width: 450px;
+        background-color: #9da0ea;
+        margin: 100px auto 10px auto;
+    }
+    .box{
+        font-size: 42px;
+        font-weight: 400;
+    }
+    #startreset{
+        width: fit-content;
+    }
+    #timeremaining{
+        position: absolute;
+        width: fit-content;
+        padding: 10px;
+        top: 20px;
+        left: 10px;
+        background-color: #f1ff92;
+    }
+    .box:hover{
+        background-color: white;
+        color: black;
+        box-shadow: 0px 4px #6b54d3;
+    }
+    #developer{
+        top: 540px;
+        left: 200px;
+        font-family: cursive,sans-serif;
+        font-weight: 400;
+    }
+    #stay{
+        position: absolute;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 800;
+        top: 700px;
+        left: 160px;
+        display: block;
+    }
+    #instruction{
+        font-size: 30px;
+    }
+    #correct{
+        left: 235px;
+    }
+    #wrong{
+        left: 220px;
+    }
+}
